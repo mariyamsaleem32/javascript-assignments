@@ -97,32 +97,56 @@ should be displayed by default.*/
 // document.write("5*10="+table + "<br>");
 // }
 
-/*Take
-a) Take three subjects name from user and store them in 3
-different variables.*/
-document.write("subject" +" "+"total marks"+" "+"obtained mark" +" "+"percentage"+"<br");
-var subject1 = prompt("Enter your first subject");
-var subject2 = prompt("Enter your second subject");
-var subject3 = prompt("Enter your third subject");
 
-// b) Total marks for each subject is 100, store it in another variable.
-var totalMarksOfSubject = 100;
+// Step a: Take three subjects' names from the user
+let subject1 = prompt("Enter first subject name:");
+let subject2 = prompt("Enter second subject name:");
+let subject3 = prompt("Enter third subject name:");
 
-// c) Take obtained marks for first subject from user and stored it in different variable.
-var obtaindMarksOfFirstSubject = +prompt("Enter your obtained marks of first subject");
+// Step b: Total marks for each subject (assuming 100 for each subject)
+const totalMarksPerSubject = 100;
 
-// d) Take obtained marks for remaining 2 subjects from user and store them in variables.
-var obtaindMarksOfSecondSubject = +prompt("Enter your obtained marks of second subject");
-var obtaindMarksThirdSubject = +prompt("Enter your obtained marks of third subject");
+// Step c: Take obtained marks for the first subject from the user
+let obtainedMarksSubject1 = parseFloat(prompt(`Enter obtained marks for ${subject1}:`));
 
+// Step d: Take obtained marks for the remaining two subjects from the user
+let obtainedMarksSubject2 = parseFloat(prompt(`Enter obtained marks for ${subject2}:`));
+let obtainedMarksSubject3 = parseFloat(prompt(`Enter obtained marks for ${subject3}:`));
 
-// e) Now calculate total marks and percentage and show the result in browser.
-var percentage1 = obtaindMarksOfFirstSubject / totalMarksOfSubject * 100;
-var percentage2 = obtaindMarksOfSecondSubject / totalMarksOfSubject * 100;
-var percentage3 = obtaindMarksThirdSubject / totalMarksOfSubject * 100;
-document.write(subject1 + " " +totalMarksOfSubject+" "+obtaindMarksOfFirstSubject+ " " + percentage1+"</br>");
-document.write(subject2 + " " +totalMarksOfSubject+" "+obtaindMarksOfSecondSubject+" " + percentage2+"</br>");
-document.write(subject3 + " " +totalMarksOfSubject+" "+obtaindMarksThirdSubject+ " " + percentage3+"</br>");
+// Step e: Calculate total marks and percentage
+let totalObtainedMarks = obtainedMarksSubject1 + obtainedMarksSubject2 + obtainedMarksSubject3;
+let percentage = (totalObtainedMarks / (3 * totalMarksPerSubject)) * 100;
+
+// Display the result in a table format
+document.write(`
+    <h2>Result:</h2>
+    <table border="1">
+        <tr>
+            <th>Subject</th>
+            <th>Total Marks</th>
+            <th>Obtained Marks</th>
+        </tr>
+        <tr>
+            <td>${subject1}</td>
+            <td>${totalMarksPerSubject}</td>
+            <td>${obtainedMarksSubject1}</td>
+        </tr>
+        <tr>
+            <td>${subject2}</td>
+            <td>${totalMarksPerSubject}</td>
+            <td>${obtainedMarksSubject2}</td>
+        </tr>
+        <tr>
+            <td>${subject3}</td>
+            <td>${totalMarksPerSubject}</td>
+            <td>${obtainedMarksSubject3}</td>
+        </tr>
+    </table>
+    <br>
+    <p>Total Marks Obtained: ${totalObtainedMarks}</p>
+    <p>Percentage: ${percentage.toFixed(2)}%</p>
+`);
+
 
 
 
