@@ -23,21 +23,29 @@ codes:- A=65, Z=90, a=97, z=122).*/
 /*
 2. Write a JavaScript program that accept two integers and
 display the larger. Also show if the two integers are equal. */
-var integerOne = +prompt("Enter a integer number");
-var integerTwo = +prompt("Enter a second integer number");
-if (integerOne === integerTwo) {
-    alert("both integers are eual");
-} 
-else if (integerOne > integerTwo ) {
-    alert("It's largest integer");
-}else {
-    alert("both integers are not eual");
-}
+// var integerOne = +prompt("Enter a integer number");
+// var integerTwo = +prompt("Enter a second integer number");
+// if (integerOne === integerTwo) {
+//     alert("both integers are eual");
+// } 
+// else if (integerOne > integerTwo ) {
+//     alert("It's largest integer");
+// }else {
+//     alert("both integers are not eual");
+// }
 
 /*
 3. Write a program that takes input a number from user &
 state whether the number is positive, negative or zero. */
-
+var number = +prompt("Enter a number and I will check it is positive negative or zero");
+if (number < 0 ) {
+    alert("It is negative number");
+} 
+else if (number > 0 ) {
+    alert("It's positive number");
+}else {
+    alert("It's zero");
+}
 
 /*
 4. Write a program that takes a character (i.e. string of
