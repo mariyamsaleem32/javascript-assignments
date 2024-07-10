@@ -1,9 +1,18 @@
 /*  1. Declare and initialize an empty multidimensional array.
 (Array of arrays) */
+// Empty multidimensional array
+var emptyMultiArray = [];
+console.log(emptyMultiArray);
 
 /* 2. Declare and initialize a multidimensional array
 representing the following matrix: */
+// Example: Adding some nested arrays (optional)
+emptyMultiArray.push([]);
+emptyMultiArray.push([]);
+emptyMultiArray[0].push(1, 2);
+emptyMultiArray[1].push(3, 4);
 
+console.log(emptyMultiArray); // Output: [[1, 2], [3, 4]]
 /* 3. Write a program to print numeric counting from 1 to 10. */
 
 /* 4. Write a program to print multiplication table of any
