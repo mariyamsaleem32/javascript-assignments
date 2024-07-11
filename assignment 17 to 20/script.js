@@ -1,9 +1,12 @@
 /*  1. Declare and initialize an empty multidimensional array.
 (Array of arrays) */
-
+var emptyMultiArray = [];
 /* 2. Declare and initialize a multidimensional array
 representing the following matrix: */
-
+emptyMultiArray.push[[]];
+emptyMultiArray.push[[]];
+emptyMultiArray[0] = [1,2];
+emptyMultiArray[1] = [3,4];
 console.log(emptyMultiArray); // Output: [[1, 2], [3, 4]]
 /* 3. Write a program to print numeric counting from 1 to 10. */
 for (let i = 1; i < 11; i++) {
