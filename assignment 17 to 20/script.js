@@ -1,15 +1,10 @@
 /*  1. Declare and initialize an empty multidimensional array.
 (Array of arrays) */
- var arr = [];
 
 /* 2. Declare and initialize a multidimensional array
 representing the following matrix: */
-arr.push([]);
-arr.push([]);
-arr[0] = [4,7];
-arr[1] = [6,9];
-console.log(arr);
 
+console.log(emptyMultiArray); // Output: [[1, 2], [3, 4]]
 /* 3. Write a program to print numeric counting from 1 to 10. */
 for (let i = 1; i < 11; i++) {
 document.write(i+"<br>"); 
@@ -112,8 +107,3 @@ for (var i = 1; i < numbers.length; i++) {
 console.log("The smallest number in the array is: " + smallest);
 /* 10. Write a program to print multiples of 5 ranging 1 to
 100. */
-for (var i = 1; i <= 100; i++) {
-    if (i % 5 === 0) {
-        console.log(i);
-    }
-}
